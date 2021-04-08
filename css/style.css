@@ -1,0 +1,26 @@
+body {
+    background: black;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    color: #17D4FE;
+    text-align: center;
+}
+
+.action{
+    color: #fe9617;
+}
+
+.finish{
+    color: red;
+}
+.done{
+    color: #17ff59;
+}
