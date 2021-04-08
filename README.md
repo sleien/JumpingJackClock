@@ -1,5 +1,7 @@
 # Jumping Jack Clock
 
+Currently running on https://jumping.schneider.today/
+
 Action: Do jumping jacks
 
 Break: Enjoy a 15 sec break
