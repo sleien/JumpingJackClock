@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Jumping Jack Clock</title>
-  <meta charset="UTF-8">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
-<link rel="stylesheet" href="./css/style.css">
-<link rel="icon" href="./img/favicon.png" type="image/png">  
+    <meta charset="UTF-8">
+    <title>Jumping Jack Clock</title>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="wrapper action" id="MyWrapper" onload="showTime()">
-    <div id="MyStartButton" onclick="start()">Start</div>
-    <div id="MyClockDisplay"></div>
-    <div id="MyTextDisplay"></div>
-</div>
-<!-- partial -->
-  <script  src="./js/script.js"></script>
+    <!-- partial:index.partial.html -->
+	<div id="pedestalButton" onclick="showPedestal()"></div>
+    <div class="wrapper action" id="wrapper" onload="showTime()">
+        <div id="startButton" onclick="start()">Start</div>
+        <div id="display">
+            <div id="clock"></div>
+            <div id="text"></div>
+            <div id="surrenderButton" onclick="surrender()">Surrender</div>
+        </div>
+		<div id="record"></div>
+    </div>
+		<div id="tries"></div>
+    <!-- partial -->
+    <script src="./js/script.js"></script>
 
 </body>
+
 </html>

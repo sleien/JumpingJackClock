@@ -1,12 +1,5 @@
 body {
     background: black;
-}
-
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     font-size: 60px;
     font-family: Orbitron;
     letter-spacing: 7px;
@@ -14,13 +7,52 @@ body {
     text-align: center;
 }
 
-.action{
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#display {
+    display: none;
+}
+
+.action {
     color: #fe9617;
 }
 
-.finish{
+.finish {
     color: red;
 }
-.done{
+
+.done {
     color: #17ff59;
+}
+
+#surrenderButton {
+    color: red;
+}
+
+#record {
+    display: none;
+    color: #17ff59;
+}
+
+#tries {
+    display: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+#pedestalButton {
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    background-image: url("../img/pedestal.svg");
+    background-size: cover;
+    fill: white;
+    height: 50px;
+    width: 50px;
 }
