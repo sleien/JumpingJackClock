@@ -33,6 +33,7 @@ function showTime() {
         wrapper.classList.toggle("done");
         text.innerText = "You did it!";
         text.textContent = "You did it!";
+        clearInterval(timer);
     } else if (s == 15 && m == 0) {
         wrapper.classList.remove("action");
         wrapper.classList.add("finish");
@@ -49,11 +50,6 @@ function showTime() {
         text.innerText = "Action!";
         text.textContent = "Action!";
         audio.play();
-    }
-
-    if (m == 0 || s == 0) {
-        clearInterval(timer);
-        surrender();
     }
 }
 
@@ -89,7 +85,7 @@ function surrender() {
 }
 
 function showPedestal() {
-    if(tries.style.display == "block"){
+    if (tries.style.display == "block") {
         tries.style.display = "none"
         startButton.style.display = "block";
         m = m_start;
@@ -98,17 +94,17 @@ function showPedestal() {
         while (tries.firstChild) {
             tries.removeChild(tries.firstChild);
         }
-    }else{
+    } else {
         display.style.display = "none";
         record.style.display = "none";
         startButton.style.display = "none";
         tries.style.display = "block";
-    
+
         JSON.parse(localStorage.getItem('tries')).forEach(element => {
             console.log(element)
             let p = document.createElement("p");
             let date = new Date(element.date)
-            p.textContent = date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + " - " +  (Math.floor(element.seconds / 60) < 10 ? '0' : Math.floor(element.seconds / 60)) + ":" + (element.seconds % 60 < 10 ? '0' : '') + element.seconds % 60;
+            p.textContent = date.getDay() + "." + date.getMonth() + "." + date.getFullYear() + " - " + (Math.floor(element.seconds / 60) < 10 ? '0' : Math.floor(element.seconds / 60)) + ":" + (element.seconds % 60 < 10 ? '0' : '') + element.seconds % 60;
             tries.appendChild(p);
         });
     }
